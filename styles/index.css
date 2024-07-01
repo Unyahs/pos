@@ -1,0 +1,131 @@
+
+html {
+	font-size:62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Zen Kaku Gothic Antique, 'Source Sans Pro';
+   
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-attachment: fixed;
+    font-size: 1.3em;
+    background-color: #EDEBDE;
+}
+
+a{
+    text-decoration: none;
+    color: #D9C4B3; 
+}
+
+p{
+    font-size: 18px;
+    color: #D9C4B3;
+    font-family: Zen Kaku Gothic Antique, 'Source Sans Pro';
+}
+
+label{
+    font-size: 1.7rem;
+}
+
+.container{
+    background-color: #C47C4C;
+    border-radius: 15px;
+    max-width: 70rem;
+    width: 100%;
+    padding: 2rem;
+    box-shadow: rgb(0 0 0 / 35%) 0px 2px 6px 1px;
+}
+
+.container h2{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+    color: black;
+    
+}
+
+hr.line{
+    margin: 5px auto;
+    width: 55%;
+    border-color: black;
+}
+
+
+.container .log{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 2rem;
+    color: #D9C4B3;
+}
+
+.input-box{
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.input-box input{
+    width: 100%;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 0 3rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    height: 5rem;
+    background-color: #EDEBDE;
+}
+
+.container .btn{
+    width: 40%;
+    height: 5rem;
+    outline: none;
+    background-color: #EDEBDE;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+}
+
+.container .btn:hover{
+    background-color: #D9C4B3;
+}
+.register a{
+    font-size: 1.7rem;
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        margin: 0 20px;
+    }
+
+    .container h2{
+        font-size: 3rem;
+    }
+
+    .container .log{
+        margin: 0;
+        gap: 1.5rem;
+    }
+}

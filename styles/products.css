@@ -1,0 +1,417 @@
+html{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: Zen Kaku Gothic New, 'Source Sans Pro';
+    color: black;
+}
+
+body{
+    background-color: #EDEBDE;
+}
+
+/* ============MAIN WRAPPER=============*/
+
+.wrapper{
+    max-width: 140em;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    gap: 2rem;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+
+/* ============SIDEBAR=============*/
+
+.wrapper .sidebar{
+    background: #C47C4C;
+    padding: 1.5rem 0;
+    border-radius: 1.5rem;
+}
+
+.wrapper .sidebar h2{
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: 400;
+    color: black;
+    font-family: Poppins, 'Source Sans Pro';
+    text-transform: uppercase;
+    text-align: center;
+}
+
+hr.line{
+    margin: 5px auto;
+    width: 85%;
+    border-color: black;
+    margin-bottom: 1rem;
+}
+
+.wrapper .sidebar ul li{
+    padding: 15px;
+    font-size: 2.1rem;
+    font-family: Zen Kaku Gothic Antique, 'Source Sans Pro';
+    font-weight: 400;
+} 
+
+.wrapper .sidebar ul li a{
+    color: black;
+    display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+    width: 50px;
+}
+
+.wrapper .sidebar ul li:hover{
+    background-color: #ECAC81;
+}
+
+.wrapper .sidebar ul li:hover a{
+    color: grey;
+}
+
+.wrapper .sidebar .current{
+    color: #ECAC81;
+}
+
+.wrapper .main_content{
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    max-height: calc(100vh - 4rem);
+}
+
+.wrapper .main_content .header{
+    text-align: right;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 1rem 0;
+}
+
+.wrapper .main_content .header div{
+    margin-left: auto;
+}
+
+/* ============HAMBURGER MENU=============*/
+#hamburger {
+    display: none;
+    border: none;
+    cursor: pointer;
+    background-color: #C47C4C;
+    border-radius: .5rem;
+    aspect-ratio: 1;
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 4px 1px;
+    width: 3rem;
+}
+
+#closeButton {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    background-color: #C47C4C;
+    padding: .5rem;
+    border-radius: .5rem;
+    aspect-ratio: 1;
+    width: 3rem;
+    margin-left: 2rem;
+}
+
+/* ============MAIN CONTENT INFO=============*/
+
+.wrapper .main_content .info{
+    font-size: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    max-height: 100svh;
+    grid-template-rows: auto 1fr;
+    flex: 1;
+    overflow: auto;
+}
+
+/* ============INFO HEAD=============*/
+.wrapper .main_content .info .head{
+    display: flex;
+    gap: 1rem;
+}
+
+.wrapper .main_content .info .add{
+    background: #D9C4B3;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+}
+
+.wrapper .main_content .info .search{
+    padding: 0 1rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    width: 25%;
+}
+
+.wrapper .main_content .info .search:focus{
+    outline: none;
+}
+
+/* ============INFO BODY=============*/
+.wrapper .main_content .info .body{
+    height: 100%;
+    background: #D9C4B3;
+    border-radius: 1.5rem;
+    text-align: left;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.wrapper .main_content .info .body table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wrapper .main_content .info .body th, td {
+    font-size: 1.5rem;
+    padding: 1.3rem;
+}
+
+
+.wrapper .main_content .info .body .action{
+    text-align: center;
+}
+
+/* Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+/* Modal Content */
+.modal-content {
+    background-color: #D9C4B3;;
+    margin: auto;
+    padding: 20px;
+    border-radius: 1.5rem;
+    width: 60%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2{
+    text-align: left;
+    font-size: 2.3rem;
+    font-weight: 400;
+    color: black;
+    text-align: left;
+}
+
+.modal-content .modal-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-content form{
+    margin-top: 2rem;
+}
+
+.input-box{
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.input-box input, select{
+    width: 100%;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    height: 4.5rem;
+}
+
+.btn{
+    width: 50%;
+    height: 5rem;
+    outline: none;
+    background-color: #EDEBDE;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+
+/* ============MEDIA QUERIES=============*/
+@media screen and (max-width: 1400px) and (min-width: 1150px){
+    .wrapper{
+        
+        padding: 1.5rem;
+        margin: 0;
+    }
+
+    .wrapper .main_content{
+        max-height: calc(100vh - 3rem);
+    }
+}
+
+@media screen and (max-width: 1350px) and (min-width: 1000px){
+    .wrapper .sidebar h2{
+        font-size: 2.1rem;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .wrapper .sidebar {
+        display: none; /* Hide the sidebar */
+    }
+
+    #hamburger {
+        display: block; /* Display the hamburger button */
+        font-size: 1rem;
+    }
+
+    .wrapper .main_content .header{
+        padding: 0;
+    }
+
+    .modal-content{
+        width: 75%;
+    }
+
+    /* Additional styles for the menu when displayed */
+    .sidebar.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1000;
+        padding: 2rem 0;
+        inset: 0 70% 0 0;
+        background: hsla(0, 13%, 52%, 0.1);
+        backdrop-filter: blur(.5rem);
+        border-radius: 0;
+        overflow-y: auto;
+    }   
+
+    nav{
+        margin: 3rem 0;
+    }
+    .wrapper .sidebar h2,hr{
+        display: none;
+    }
+    
+
+    .sidebar.active ul li {
+        padding: 2rem;
+        font-size: 2rem;
+        font-family: Zen Kaku Gothic Antique, 'Source Sans Pro';
+        font-weight: 400;
+    }
+
+    #closeButton{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px){
+    
+    .wrapper .main_content .info .category-btns{
+        grid-template-columns: 1fr;
+        overflow-x: hidden; 
+        overflow-y: auto; 
+        white-space: normal; 
+    }
+
+    .sidebar.active {
+        inset: 0 50% 0 0;
+    }  
+}
+
+@media screen and (max-width: 520px){
+    .wrapper .main_content .info .body th{
+        display: none;
+
+    }
+
+    .wrapper .main_content .info .body td{
+        display: grid;
+        gap: .5rem;
+        grid-template-columns: 15ch auto;
+
+    }
+
+    .wrapper .main_content .info .body td::before{
+        content: attr(data-cell) ": ";
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    .wrapper .main_content .info .body .action{
+        text-align: left;
+    }
+
+    .wrapper .main_content .header{
+        font-size: 1.5rem;
+    }
+
+    .modal-content{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 660px){
+
+    .sidebar.active {
+        inset: 0 20% 0 0;
+    }  
+}
